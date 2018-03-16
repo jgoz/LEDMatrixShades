@@ -2,6 +2,8 @@
 
 typedef void (*functionList)(); // definition for list of effect function pointers
 extern const byte numEffects;
+extern const byte numSets;
+extern const char * const stringArray[];
 
 // Buffers for graphics generation
 byte GlassesBits[24][2] = {{0}};    // 24 column x 8 row bit arrays (on/off frame)

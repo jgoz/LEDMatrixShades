@@ -78,25 +78,11 @@ void doButtons() {
     
     case BTNRELEASED: // button was pressed and released quickly
       cycleMillis = currentMillis; 
-      if (++currentEffect >= numEffects) currentEffect = 0; // loop to start of effect list
+      if (++currentSet >= numSets) currentSet = 0; // loop to start of set list
+      currentEffect = 0; // start at beginning of set
       effectInit = false; // trigger effect initialization when new effect is selected
     break;
     
-    case BTNLONGPRESS: // button was held down for a while
-      autoCycle = !autoCycle; // toggle auto cycle mode
-      if (autoCycle) {
-        switchDrawType(0,0);
-        displayChar('A');
-        delay(500);
-        effectInit = false;
-      } else {
-        switchDrawType(0,0);
-        displayChar('M');
-        delay(500);
-        effectInit = false;
-      }
-    break;
-  
   }
   
   // Check the brightness adjust button  
@@ -113,7 +99,3 @@ void doButtons() {
   
   }
 }
-
-
-
-
