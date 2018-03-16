@@ -388,6 +388,20 @@ void beatingHearts() {
 
 }
 
+void twoFourK() {
+
+  if (!effectInit) {
+    switchDrawType(0, 0);
+    effectInit = true;
+    effectDelay = 60;
+  }
+
+  loadGraphicsFrame(3);
+
+  writeBitFrame(0, 0);
+
+}
+
 byte eqLevels[12] = {0};
 int eqDecay = 0;
 int eqRandomizerDelay = 0;
