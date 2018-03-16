@@ -470,23 +470,6 @@ void scrollingHearts() {
   writeBitFrame(0, 0);
 }
 
-
-
-void messageOne() {
-  scrollMessage(0, SCROLL1X); 
-}
-
-void messageTwo() {
-  scrollMessage(1, SCROLL1X);
-}
-
-void messageThree() {
-  scrollMessage(2, SCROLL1X);
-}
-
-
-
-
 // Scroll grayscale frame
 void spinGrayscale() {
 
@@ -633,8 +616,3 @@ void blockyNoise() {
   writeBitFrame(0,0);
   
 }
-
-
-
-
-

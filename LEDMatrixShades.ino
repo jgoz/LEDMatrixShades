@@ -42,6 +42,9 @@ void setup() {
 
 }
 
+// Scrolling messages
+#define MESSAGE_FN(name, index, mode) \
+  void name() { scrollMessage(index, mode); }
 
 
 
