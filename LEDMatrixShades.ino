@@ -45,30 +45,39 @@ void setup()
 #define MESSAGE_FN(name, index, mode) \
   void name() { scrollMessage(index, mode); }
 
-
-
-// List of effects that will be displayed
-functionList effectList[] = { beatingHearts,
-                              messageOne,
-                              sparkles,
-                              spinGrayscale,
-                              //rampStrober,
-                              scrollingHearts,
-                              messageTwo,
-                              dualPlasma,
-                              fakeEQ,
-                              blockyNoise,
-                              Plasma,
-                              rain,
-                              messageThree,
-                              rider,
-                              sines,
-                              slantBars
+const char string0[] PROGMEM = "24K Magic  ";
+const char string1[] PROGMEM = "So Player  ";
+const char string2[] PROGMEM = "Keep UP  ";
+const char string3[] PROGMEM = "We're Up All Night    ";
+const char string4[] PROGMEM = "We've Come Too Far    ";
+const char string5[] PROGMEM = "Let's Raise The Bar    ";
+const char *const stringArray[] PROGMEM = {
+    string0,
+    string1,
+    string2,
+    string3,
+    string4,
+    string5,
 };
+
+MESSAGE_FN(msg_24kmagic, 0, SCROLL1X);
+MESSAGE_FN(msg_soPlayer, 1, SCROLL1X);
+MESSAGE_FN(msg_keepUp, 2, SCROLL1X);
+MESSAGE_FN(msg_upAllNight, 3, SCROLL2X);
+MESSAGE_FN(msg_comeTooFar, 4, SCROLL2X);
+MESSAGE_FN(msg_raiseTheBar, 5, SCROLL2X);
 
 // Set list
 const byte numSets = 3;
 const byte numEffects = 6;
+
+functionList setList[numSets][numEffects] = {
+    // love/intro
+    {beatingHearts, scrollingHearts, beatingHearts, scrollingHearts, beatingHearts, scrollingHearts},
+    // 24K Magic
+    {sparkles, msg_24kmagic, sparkles, msg_soPlayer, sparkles, msg_keepUp},
+    // Get Lucky
+    {rider, msg_upAllNight, rider, msg_comeTooFar, rider, msg_raiseTheBar}};
 
 // Main loop
 void loop()
