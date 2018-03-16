@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "name": "Arduino",
+            "includePath": [
+                "${workspaceRoot}",
+                "/Users/johng/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/libraries/Wire/src",
+                "/Users/johng/Applications/Arduino.app/Contents/Java/hardware/tools/avr/avr/include",
+                "/Users/johng/Applications/Arduino.app/Contents/Java/hardware/tools/avr/avr/include/avr",
+                "/Users/johng/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/cores/arduino",
+                "/System/Library/Frameworks/OpenCL.framework/Versions/A/lib/clang/2.0/include",
+                "/Users/johng/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/variants/micro"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": false,
+                "path": [
+                    "/Users/johng/Applications/Arduino.app/Contents/Java/hardware",
+                    "/Users/johng/Applications/Arduino.app/Contents/Java/libraries",
+                    "${workspaceRoot}"
+                ]
+            },
+            "intelliSenseMode": "clang-x64",
+            "macFrameworkPath": [
+                "/System/Library/Frameworks",
+                "/Library/Frameworks"
+            ]
+        }
+    ],
+    "version": 3
+}
