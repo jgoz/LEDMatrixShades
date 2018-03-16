@@ -98,7 +98,7 @@ void scrollMessage(byte message, byte mode) {
     initMessage(message);
     effectInit = true;
     if (mode != SCROLL2X) {
-      effectDelay = 30;
+      effectDelay = 21;
     } else {
       effectDelay = 7;
     }
