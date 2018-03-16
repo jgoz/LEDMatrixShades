@@ -175,7 +175,7 @@ void rain() {
 
 }
 
-typedef struct Stars {
+struct Stars {
   float xIncr;
   float yIncr;
   float xPos;
