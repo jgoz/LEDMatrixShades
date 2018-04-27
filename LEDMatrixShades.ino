@@ -51,6 +51,10 @@ const char string2[] PROGMEM = "Keep UP  ";
 const char string3[] PROGMEM = "We're Up All Night    ";
 const char string4[] PROGMEM = "We've Come Too Far    ";
 const char string5[] PROGMEM = "Let's Raise The Bar    ";
+const char string6[] PROGMEM = "HARDER BETTER FASTER STRONGER    ";
+const char string7[] PROGMEM = "Work it Harder  Make it Better    ";
+const char string8[] PROGMEM = "Do it Faster  Makes us Stronger    ";
+const char string9[] PROGMEM = "Our work is Never Over    ";
 const char *const stringArray[] PROGMEM = {
     string0,
     string1,
@@ -58,6 +62,10 @@ const char *const stringArray[] PROGMEM = {
     string3,
     string4,
     string5,
+    string6,
+    string7,
+    string8,
+    string9,
 };
 
 MESSAGE_FN(msg_24kmagic, 0, SCROLL1X);
@@ -66,18 +74,25 @@ MESSAGE_FN(msg_keepUp, 2, SCROLL1X);
 MESSAGE_FN(msg_upAllNight, 3, SCROLL2X);
 MESSAGE_FN(msg_comeTooFar, 4, SCROLL2X);
 MESSAGE_FN(msg_raiseTheBar, 5, SCROLL2X);
+MESSAGE_FN(msg_harderBetter, 6, SCROLL2X);
+MESSAGE_FN(msg_workitHarder, 7, SCROLL2X);
+MESSAGE_FN(msg_doitFaster, 8, SCROLL2X);
+MESSAGE_FN(msg_neverOver, 9, SCROLL2X);
 
 // Set list
-const byte numSets = 3;
+const byte numSets = 4;
 const byte numEffects = 6;
 
 functionList setList[numSets][numEffects] = {
+    // Get Lucky
+    {rider, msg_upAllNight, rider, msg_comeTooFar, rider, msg_raiseTheBar},
+    // Stronger
+    {msg_harderBetter, msg_workitHarder, msg_harderBetter, msg_doitFaster, msg_harderBetter, msg_neverOver},
     // love/intro
     {beatingHearts, scrollingHearts, beatingHearts, scrollingHearts, beatingHearts, scrollingHearts},
     // 24K Magic
     {sparkles, msg_24kmagic, sparkles, msg_soPlayer, sparkles, msg_keepUp},
-    // Get Lucky
-    {rider, msg_upAllNight, rider, msg_comeTooFar, rider, msg_raiseTheBar}};
+};
 
 // Main loop
 void loop()
