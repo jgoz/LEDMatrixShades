@@ -440,6 +440,14 @@ void loadGraphicsFrame(int frame) {
  
 }
 
+void loadDiamondsFrame(int frame) {
+
+  for (int x = 0; x < 24; x++) {
+    GlassesBits[x][0] = pgm_read_byte(Diamonds[frame]+x);
+  }
+ 
+}
+
   /*
   readBrightness();
   brightact++;

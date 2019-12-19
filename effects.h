@@ -402,6 +402,30 @@ void twoFourK() {
 
 }
 
+void diamonds() {
+
+  if (!effectInit) {
+    switchDrawType(0, 0);
+    effectInit = true;
+    effectDelay = 60;
+  }
+
+  static byte currentDiamondFrame = 0;
+
+
+  if (currentDiamondFrame < 3) {
+    loadDiamondsFrame(currentDiamondFrame);
+  } else {
+    loadDiamondsFrame(5 - currentDiamondFrame);
+  }
+
+  currentDiamondFrame++;
+  if (currentDiamondFrame > 5) currentDiamondFrame = 0;
+
+  writeBitFrame(0, 0);
+
+}
+
 byte eqLevels[12] = {0};
 int eqDecay = 0;
 int eqRandomizerDelay = 0;
